@@ -1,0 +1,24 @@
+{
+    "name": "bry/test1",
+    "description": "T1",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Marvel\\": "marvel/",
+            "App\\": "app/"
+        },
+        "files": [
+            "app/generators.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Rhinodontypicus",
+            "email": "rhinodontypicus@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": "^3.0"
+    }
+}
