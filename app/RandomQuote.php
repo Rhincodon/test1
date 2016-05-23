@@ -21,7 +21,7 @@ trait RandomQuote
      */
     public function say(string $name) : string
     {
-        $quote = $this->getRandomQuote();
+        $quote = $this->get();
         $message = "Hi, $name! There is a new quote for you: $quote";
 
         echo $message;
@@ -32,7 +32,7 @@ trait RandomQuote
     /**
      * @return mixed
      */
-    public static function getRandomQuote()
+    public static function get() : string
     {
         $randKey = array_rand(self::$quotes, 1);
         return self::$quotes[$randKey];

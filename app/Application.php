@@ -13,7 +13,7 @@ class Application
     {
         $response = $this->makeResponse();
 
-        $response->setContent(RandomQuote::getRandomQuote());
+        $response->setContent(RandomQuote::get());
 
         $response->send();
     }
@@ -21,7 +21,7 @@ class Application
     /**
      * @return Response
      */
-    private function makeResponse()
+    private function makeResponse() : Response
     {
         return new Response(null, Response::HTTP_OK, ['content-type' => 'text/html']);
     }
